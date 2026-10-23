@@ -9,3 +9,7 @@ Run `npm test && npm run check && npm run build`. The preserved Studio and engin
 The current source registry performs no network acquisition. Do not wire a fetch loop to it until robots/source policy, request budgets, redirect validation, public-address/DNS protections, response limits, timeouts and evidence storage exist. URL syntax validation alone is not SSRF protection.
 
 Record the next exact dependency and continue normal authorized engineering within the active session. Automatic CI does not mean an unattended coding agent or crawler is running.
+
+## Public-web SEO evidence
+
+For changes affecting public discovery, apply [the SEO release standard](SEO_RELEASE_STANDARD.md). Keep applicability and results in the existing PR/release receipt; this adds no deployment authority and does not certify current compliance.
