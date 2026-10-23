@@ -8,6 +8,19 @@ This is the owner's public-web quality baseline, applied during design, implemen
 
 Classify each affected route/template as public and intended for indexing, public but deliberately excluded, or private/staging. Do not optimize private dashboards for discovery or weaken access controls for crawlers.
 
+## SEO by design and during implementation
+
+Before coding a public surface, record its audience/user need, route and indexing decision, data/provenance contract and rendering/component plan in the existing task or PR. Implement these decisions in the same slice as the feature, not as a final SEO retrofit.
+
+1. **Audience and routes:** For a market researcher, explain what the foundry can prove before inviting exploration; define each proposed company page's user question before adding a route. Preserve the distinction between the foundry homepage, /lab/ and /g/* share routes. Plan the canonical origin, duplicate/share handling and indexing class before changing public/_redirects; a fallback HTTP 200 must not disguise missing content.
+2. **Content/data contract:** Use source/snapshot/claim identifiers, observation time, uncertainty and permitted public citations as the future page-data contract. Do not derive confident company descriptions from demo rows.
+3. **Implementation defaults:** The current implementation is static HTML (index.html, lab/index.html) copied by scripts/build.js, not a shared SEO framework. Put page-specific title/description, semantic content, real anchor navigation and deliberate robots/canonical output in that existing path. Reuse the current page/style conventions; when images are introduced, specify relevant alt text, dimensions and loading behavior there rather than introducing a new stack.
+4. **Build and verify together:** Extend test/foundry-routes.test.js alongside route/template work to cover honest development claims, Lab/share routing, missing routes and intended metadata/exclusions. Inspect built HTML and mobile rendering during the slice; the current tests do not certify crawlability or live indexing.
+
+Review evidence at design, implementation and template-test stages; the release checks below are the final confirmation, not the first time SEO is considered. Reuse existing patterns and improve them where evidence shows a gap; referenced code is an integration point, not certification. Do not claim proposed tests or components exist until implemented.
+
+Post-deployment-only observations (actual Google indexing, Search Console coverage and sufficient real-user field data) cannot be prerequisites to the first authorized deployment. Mark them unverified with a responsible follow-up and available pre-release evidence; this does not excuse known policy violations, unsafe exposure or missing checks that can run before release.
+
 ### Google eligibility and policies (mandatory for index-target pages)
 
 - Verify Googlebot can access the intended public page, receives HTTP 200 and can see indexable main content; check rendered HTML, resource access and accidental robots/noindex blocks.
