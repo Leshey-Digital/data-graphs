@@ -13,3 +13,7 @@ Run `npm test`, `npm run check`, and `npm run build`. Record exact execution/dep
 Normal staging work may continue. Production deployment, DNS cutover, secret changes, paid commitments, customer-data mutation, destructive migrations, deleting evidence, irreversible identity merges and broad/uncontrolled acquisition require the applicable explicit authorization. No paid SaaS/data/AI dependencies are authorized; keep infrastructure Cloudflare-first and bounded. Never expose credentials or raw private data.
 
 Continue within an active session until a genuine blocker, unsafe boundary or session limit. CI validates changes; it is not an always-on coding agent. Never claim unattended engineering, live crawling or deployment unless a real runner/runtime was installed and verified. Record exact blockers and independent work that remains possible; do not repeatedly retry unchanged failures.
+
+## Public-web SEO release standard
+
+Apply [SEO_RELEASE_STANDARD.md](docs/SEO_RELEASE_STANDARD.md) to relevant public-web work from design through release. Record applicability and evidence; preserve all existing product, safety and release boundaries.
